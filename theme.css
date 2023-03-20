@@ -1,0 +1,506 @@
+/**
+ * @name ClearVision // Alex#2237 New version
+ * @author ClearVision Team
+ * @version 6
+ * @description Alex's custom edit based on a ClearVision an Highly customizable theme for BetterDiscord.
+ * @source https://github.com/ClearVision/ClearVision-v6
+ * @website https://clearvision.gitlab.io
+ * @invite 2fKpjAR
+ */
+
+/* Credits to Zerthox for making the original theme. */
+
+/* IMPORT CSS */
+@import url(https://clearvision.gitlab.io/v6/main.css);
+
+
+
+/**
+ * @name Horizontal Server List
+ * @author Gibbu#1211
+ * @version 2.1.0
+ * @invite ZHthyCw
+ * @description Moves the server list from the left to the top of Discord. Compatible with Server Folders and most basic transparent themes
+ * @source https://github.com/DiscordStyles/HorizontalServerList
+ * @website https://www.gibbu.me
+*/
+
+@import url("https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css");
+
+/* Bottom HorizontalServerList. Simply remove the comments surrounding the @import to enable it. */
+/* @import url("https://discordstyles.github.io/Addons/bottomhsl.css"); */
+
+:root {
+  --HSL-server-icon-size: 40px;  /* Size of the server icons | DEFAULT: 40px */
+  --HSL-server-spacing: 10px;  /* Spacing between each server icon | DEFAULT: 10px */
+  --HSL-server-direction: column; /* Direct of the server list. | Options: column, column-reverse | DEFAULT: column */
+}
+
+/**
+ * @name RadialStatus
+ * @author Gibbu#1211
+ * @version 2.0.0
+ * @invite ZHthyCw
+ * @description Changes the status icons to wrap around the avatar. Shape can be changed inside the theme file.
+ * @source https://github.com/DiscordStyles/RadialStatus
+ * @website https://www.gibbu.me
+*/
+
+@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");
+
+:root {
+  --rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+  --rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+  --rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+
+  --rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
+  --rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+  --rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+
+  --rs-avatar-shape: 50%; /* 50% for round - 0% for square */
+
+  --rs-online-color: #43b581; /* Colour for online status */
+  --rs-idle-color: #faa61a; /* Colour for idle status */
+  --rs-dnd-color: #f04747; /* Colour for dnd status */
+  --rs-offline-color: #636b75; /* Colour for offline status */
+  --rs-streaming-color: #643da7; /* Colour for streaming status */
+  --rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+  --rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
+
+  --rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+}
+
+
+/* SETTINGS */
+:root {
+	/* RADIAL STATUS */
+	--rs-small-spacing: 2px;  /* spacing between avatar and status [default: 1px, newDefault: 0px] */
+  	--rs-large-spacing: 2px;  /* spacing between avatar and status for user popouts & modals/profiles [default: 3px] */
+  	--rs-width: 2px;  /* Width/thickness of status border [default: 2px] */
+  	--rs-avatar-shape: 10%;  /* 50% for round - 0% for square [newDefault: 2%]*/
+  	--rs-online-color: var(--online-color);  /* See STATUS COLORS */
+  	--rs-idle-color: var(--idle-color);  /* See STATUS COLORS */
+  	--rs-dnd-color: var(--dnd-color);  /* See STATUS COLORS */
+  	--rs-offline-color:  var(--offline-color);  /* See STATUS COLORS */
+  	--rs-streaming-color: var(--streaming-color);  /* See STATUS COLORS */
+  	--rs-invisible-color: var(--offline-color);  /* See STATUS COLORS */
+  	
+  	/* HORIZONTAL SERVER LIST */
+	--HSL-server-icon-size: 40px;
+	--HSL-server-spacing: 10px;
+
+	/* ACCENT COLORS */
+	--main-color: #FF3F41; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
+	--hover-color: #cc2e2f; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
+	--success-color: #43b581; /* success accent color (hex, rgb or hsl) [default: #43b581] */
+	--danger-color: #982929; /* danger accent color (hex, rgb or hsl) [default: #982929] */
+
+	/* STATUS COLORS */
+	--online-color: #43b581; /* online status color (hex, rgb or hsl) [default: #43b581] */
+	--idle-color: #faa61a; /* idle status color (hex, rgb or hsl) [default: #faa61a] */
+	--dnd-color: #982929; /* dnd status color (hex, rgb or hsl) [default: #982929] */
+	--streaming-color: #593695; /* streaming status color (hex, rgb or hsl) [default: #593695] */
+	--offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
+
+	/* Customization Patch */
+	--channel-unread: var(--main-color); /* Unread Server channel color. [default:  var(--main-color)] THIS OVERRIDES YOUR MAIN COLOR*/
+	--channel-color:  rgba(255,255,255,0.3); /*Read Server channel color  [default: rgba(255,255,255,0.3);]*/
+	--channel-text-selected: #fff; /* Selected channel text color, CV default is #fff */
+	--muted-color: rgba(255,255,255,0.1); /*Muted channel color  [default: rgba(255,255,255,0.1);]*/
+	--url-color: var(--main-color); /*The color of url links [default: var(--main-color)]*/   
+	
+	/* GENERAL */
+	--main-font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; /* main font for app (font must be installed) [default: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif] */
+	--code-font: Consolas, Liberation Mono, Menlo, Courier, monospace; /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
+	--server-columns: 1; /* amount of server list columns [default: 1] */
+	--channels-width: 240px; /* channel list width (240px for Discord default) [default: 220px] */
+	--members-width: 240px; /* member list width [default: 240px] */
+	--avatar-roundness: 10%; /* avatar roundness (0% for squares, 50% for circles) [default: 50%] */
+
+	/* APP BACKGROUND */
+	--background-shading: 0%; /* app background shading (0 for complete smoothness) [default: 100%] */
+	--background-overlay: rgba(0, 0, 0, 0.6); /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
+	--background-image: url(https://i.imgur.com/4e89qhs.jpg); /* app background image (link must be HTTPS) [default: url(https://clearvision.gitlab.io/images/sapphire.jpg)]*/
+	--background-position: center; /* app background position [default: center] */
+	--background-size: cover; /* app background size [default: cover] */
+	--background-repeat: no-repeat; /* app background repeat [default: no-repeat] */
+	--background-attachment: fixed; /* app background attachment [default: fixed] */
+	--background-brightness: 100%; /* app background brightness (< 100% for darken, > 100% for lighten) [default: 100%] */
+	--background-contrast: 100%; /* app background contrast [default: 100%] */
+	--background-saturation: 100%; /* app background saturation [default: 100%] */
+	--background-invert: 0%; /* app background invert (0 - 100%)  [default: 0%] */
+	--background-grayscale: 0%; /* app background grayscale ( 0 - 100%) [default: 0%] */
+	--background-sepia: 0%; /* app background sepia (0 - 100%) [default: 0%] */
+	--background-blur: 0px; /* app background blur [default: 0px] */
+	
+	/* HOME BUTTON ICON */
+	--home-icon: url(https://clearvision.gitlab.io/icons/discord.svg); /* home button icon (link must be HTTPS) [default: url(https://clearvision.gitlab.io/icons/discord.svg)]*/
+	--home-position: center; /* home button icon position [default: center] */
+	--home-size: 40px; /* home button icon size [default: 40px] */
+	
+	/* MODAL BACKDROP */
+	--backdrop-overlay: rgba(0, 0, 0, 0.8); /* modal backdrop overlay color/gradient [default: rgba(0, 0, 0, 0.8)] */
+	--backdrop-image: var(--background-image); /* modal backdrop image (link must be HTTPS) [default: var(---background-image)] */
+	--backdrop-position: var(--background-position); /* modal backdrop position [default: var(---background-position)] */
+	--backdrop-size: var(--background-size); /* modal backdrop size [default: var(---background-size)] */
+	--backdrop-repeat: var(--background-repeat); /* modal backdrop repeat [default: var(---background-repeat)] */
+	--backdrop-attachment: var(--background-attachment); /* modal backdrop attachment [default: var(--background-attachment)] */
+	--backdrop-brightness: var(--background-brightness); /* modal backdrop brightness (< 100% for darken, > 100% for lighten) [default: var(---background-brightness)] */
+	--backdrop-contrast: var(--background-contrast); /* modal backdrop contrast [default: var(---background-contrast)] */
+	--backdrop-saturation: var(--background-saturation); /* modal backdrop saturation [default: var(---background-saturation)] */
+	--backdrop-invert: var(--background-invert); /* modal backdrop invert (0 - 100%)  [default: var(---background-invert)] */
+	--backdrop-grayscale: var(--background-grayscale); /* modal backdrop grayscale ( 0 - 100%) [default: var(---background-grayscale)] */
+	--backdrop-sepia: var(--background-sepia); /* modal backdrop sepia (0 - 100%) [default: var(---background-sepia)] */
+	--backdrop-blur: var(--background-blur); /* modal backdrop blur [default: var(--background-blur)] */
+	
+	/* USER POPOUT BACKGROUND */
+	--user-popout-image: var(--background-image); /* app background image (link must be HTTPS) [default: var(---background-image)] */
+	--user-popout-position: var(--background-position); /* user popout background position [default: var(---background-position)] */
+	--user-popout-size: var(--background-size); /* user popout background size [default: var(---background-size)] */
+	--user-popout-repeat: var(--background-repeat); /* user popout background repeat [default: var(---background-repeat)] */
+	--user-popout-attachment: scroll; /* user popout background attachment [default: var(--background-attachment)] */
+	--user-popout-brightness: var(--background-brightness); /* user popout background brightness (< 100% for darken, > 100% for lighten) [default: var(---background-brightness)] */
+	--user-popout-contrast:var(---background-contrast); /* user popout background contrast [default: var(---background-contrast)] */
+	--user-popout-saturation: var(--background-saturation); /* user popout background saturation [default: var(---background-saturation)] */
+	--user-popout-invert: var(--background-invert); /* user popout background invert (0 - 100%) [default: var(---background-invert)] */
+	--user-popout-grayscale: var(--background-grayscale); /* user popout background grayscale (0 - 100%) [default: var(---background-grayscale)] */
+	--user-popout-sepia: var(--background-sepia); /* user popout background sepia (0 - 100%) [default: var(---background-sepia)] */
+	--user-popout-blur: 0px; /* user popout background blur [default: calc(var(--background-blur) + 3px)] */
+	
+	/* USER MODAL BACKGROUND */
+	--user-modal-image: var(--background-image); /* app background image (link must be HTTPS) [default: var(---background-image)] */
+	--user-modal-position: var(--background-position); /* user modal background position [default: var(---background-position)] */
+	--user-modal-size: var(--background-size); /* user modal background size [default: var(---background-size)] */
+	--user-modal-repeat: var(--background-repeat); /* user modal background repeat [default: var(---background-repeat)] */
+	--user-modal-attachment: scroll; /* user modal background attachment [default: var(--background-attachment)] */
+	--user-modal-brightness: var(--background-brightness); /* user modal background brightness (< 100% for darken, > 100% for lighten) [default: var(---background-brightness)] */
+	--user-modal-contrast: var(--background-contrast); /* user modal background contrast [default: var(---background-contrast)] */
+	--user-modal-saturation: var(--background-saturation); /* user modal background saturation [default: var(---background-saturation)] */
+	--user-modal-invert: var(--background-invert); /* user modal background invert (0 - 100%) [default: var(---background-invert)] */
+	--user-modal-grayscale: var(--background-grayscale); /* user modal background grayscale (0 - 100%) [default: var(---background-grayscale)] */
+	--user-modal-sepia: var(--background-sepia); /* user modal background sepia (0 - 100%) [default: var(---background-sepia)] */
+	--user-modal-blur: 0px; /* user modal background blur [default: calc(var(--background-blur) + 3px)] */
+	
+	
+	--panels-opacity: rgba(0, 0, 0, 0.7);   /* Panels opacity */
+	
+}	
+
+                                                                /*  CUSTOM EDITS  */
+                                                                
+/* Voice connected background */
+.container-3baos1 > .flex-1O1GKY, .container-1giJp5 > .flex-1O1GKY {  
+	background: none;
+}               
+
+/* Nitro page background*/
+.scroller-9moviB.da-scroller.auto-Ge5KZx.scrollerBase-289Jih{
+	background: var(--panels-opacity);
+	border-radius: 10px;
+}
+
+foreignObject[mask] {   /* Members list + servers list + popup + modal */
+	mask: url();
+    -webkit-border-radius: 20%;
+    border-radius: 20%;
+}
+
+.avatar-1BDn8e, .avatar-3bWpYy, .avatar-3tNQiO.avatarSmall-1PJoGO{  /* Squared avatars */
+	border-radius: 15% !important;
+}
+
+ 
+/* user live tag */
+.live-vBWnV6 {   
+	 border-radius: 5%;
+ }    
+
+/* in call user on hover */
+.tile-kezkfV:hover{
+	transform: scale(0.95);
+}
+
+ /* Animation :  friendslist SELECTED + /command selected */
+.layout-2DM8Md:after, .selectorSelected-1_M1WV {
+    background: linear-gradient(50deg, var(--main-color), white, var(--main-color)) !important;
+    background-size: 600% 600% !important;
+
+    animation: gradientAnimation 2s ease infinite !important;
+}
+
+@keyframes gradientAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+/* Loading */
+.wanderingCubesItem-WPXqao:first-child {
+	background-image: url(https://i.pinimg.com/originals/b8/38/ed/b838ed9eead6ce4b448bc020883ec881.gif);
+	background-size: auto ;
+ 	background-position: center ;
+}
+.wanderingCubesItem-WPXqao:last-child, .wanderingCubesItem-WPXqao:before, .wanderingCubesItem-WPXqao:after {
+	display: none;
+}
+
+.inner-1gJC7_ {
+	height: 300px;
+	width: 500px;
+}
+
+div[aria-label*="Pinned Messages"]>.messagesPopoutWrap-1MQ1bW, div[aria-label*="Recent Mentions"] {  /* Pinned messages + Mentions + */
+	border-radius: 15px ; 
+}
+
+div[aria-label*="Pinned Messages"] > div > .header-ykumBX {  // Pinned messages header
+	background: var(--main-color);
+	text-align: center;
+}
+
+/*                    PANELS                        */
+
+.app,
+.app-2rEoOp {
+	margin: 25px;
+	border-radius: 6px;
+	overflow: hidden;
+}
+/* Background */
+.app-1q1i1E{
+	background: var(--background-image) ;
+ 	background-size: cover ;
+ 	background-position: center ;
+ 	background-attachment: fixed ;
+}
+
+.layer-3QrUeG[aria-label="USER_SETTINGS"], .layer-3QrUeG[aria-label="GUILD_SETTINGS"], .layer-3QrUeG[aria-label="CHANNEL_SETTINGS"] {   /* Background for user & guild settings */
+	background: var(--panels-opacity);
+}
+
+.container-3gCOGc,
+#friends,
+.activityFeed-28jde9,
+.gameLibrary-TTDw4Y,
+.applicationStore-1pNvnv,
+.chat-3bRxxu {
+	border-radius: 10px ;
+}
+
+/*   Notice ((top messages)   */
+.noticeDefault-362Ko2{
+	margin-bottom: 10px;
+}
+
+.root-217Brm, .wrapper-2qzCYF {  /* Private in call chat */ 
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+.title-3qD0b-.container-1r6BKw {  /* Bar over chat */
+    border-radius: 15px;
+    margin-bottom: 10px;
+	background:var(--panels-opacity) !important;
+}
+
+.newMessagesBar-mujexs {       /* New message notification */
+    transition: all .15s ease-in-out;
+    margin-top: 20px;
+}
+
+.wrapper-1Rf91z, .guilds-1SWlCJ {
+	background: transparent !important;
+	border: 0 !important;
+	box-shadow: 0 0	 !important;
+}
+.sidebar-2K8pFh, .sidebar-2K8pFh.hasNotice-1XRy4h {   /* Channels list */
+ 	border-radius: 10px !important;
+ 	margin-right: 20px;
+ 	//margin-left: 10px;   // REMOVE COMMENTS IF YOU USE   HorizontalServerList
+    background: transparent !important;
+}
+
+
+.container-3w7J-x, .privateChannels-1nO12o, .container-1giJp5, .activityPanel-28dQGo.panel-24C3ux, .listeningAlong-30wH70 {	 /* Channels + friends list panel, Voice connected panel, Open game panel */
+ 	background: var(--panels-opacity) !important;
+	margin-bottom: 10px;
+	border-radius: 10px;
+
+}
+
+.withTimeline-824fT_.container-6sXIoE {   /* Spotify Controls */      	/*  Works only if SPOTIFY CONTROLS Plugin is installed */
+ 	background: var(--panels-opacity) ;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	border: 0px;
+}
+
+.container-3baos1 {       /* User controls */
+ 	background: var(--panels-opacity);
+	margin-bottom: 0px;
+	border-radius: 10px;
+	padding-bottom: 5px;
+}
+
+.container-3baos1::before, .container-3baos1::after{    /* ClearVision watermark under user controls */
+	margin-bottom: 10px;
+}
+
+ /*   Chat   */
+.chatContent-a9vAAp {
+ 	border-radius: 10px !important;
+ 	background: var(--panels-opacity) !important;
+ }
+ /*   Members list  Auto-hide, Show on hover   */
+		/* Member list TAG */  
+/*
+ .membersWrap-2h-GB4:before {    			
+    content: 'Member List';
+    color: #fff;
+    line-height: 20px;
+    width: 105px;
+    height: 20px;
+    background-color: var(--main-color);
+    position: absolute;
+    text-align: center;
+    white-space: pre-wrap;
+    left: -65px;
+    top: 75px;
+    border-radius: 3px;
+    transform: rotate(270deg);
+    transition: 0.3s all ease-in;
+    font-weight: bold;
+}
+
+.membersWrap-2h-GB4:hover:before {
+    background-color: var(--hover-color);
+    margin-left: 4px;
+    transition: 0.3s all ease-out;
+}
+
+*/
+.members-1998pB.da-members.thin-1ybCId.scrollerBase-289Jih.fade-2kXiP2 > div > h2{
+	visibility: hidden;
+	padding: 0px;
+	height: 0px;
+    transition: all .3s ease-out;
+}
+
+.members-1998pB.da-members.thin-1ybCId.scrollerBase-289Jih.fade-2kXiP2:hover > div > h2{
+	visibility: visible;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    transition: all .3s ease-in;
+    opacity: .85;
+	height: 40px;
+	padding-left: 16px;
+	padding-top: 20px;
+	padding-right: 8px;
+}
+
+.membersWrap-2h-GB4 {
+    left: 181px ;
+    margin-left: -175px;
+    transition: .3s all ease-in;
+    background: var(--panels-opacity);
+ 	border-radius: 10px !important;
+}
+.members-1998pB {
+	border-radius: 10px;
+}
+.membersWrap-2h-GB4:hover{
+    left: 0;
+ 	border-radius: 10px !important;
+ 	margin-left: 10px;
+    transition: 0.3s all ease-out;
+}
+
+.iconWrapper-2OrFZ1[aria-label="Member List"] {		/* Hide members button */
+	display: none;
+}
+
+/*   Search results   */
+.searchResultsWrap-3-pOjs {
+	border-radius: 10px;
+	margin-left: 20px;
+}
+/*   Friends list top bar   */
+.container-1r6BKw.themed-ANHk51 {
+ 	border-radius: 10px !important;
+ 	background: var(--panels-opacity);
+ 	margin-bottom: 10px;
+}
+
+/*   Friends   */
+.peopleColumn-29fq28 {
+ 	border-radius: 10px !important;
+ 	background: var(--panels-opacity);
+ 	background-size: cover ;
+ 	background-position: center ;
+ 	background-attachment: fixed ;
+ 	margin-right: 10px;
+}
+
+/*   Friends playing now   */
+.nowPlayingColumn-2sl4cE {
+ 	border-radius: 10px !important;
+ 	background: var(--panels-opacity);
+ 	background-size: cover ;
+ 	background-position: center ;
+ 	background-attachment: fixed ;
+}
+
+.inner-1ilYF7 {
+	border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3);
+}
+
+.bd-scroller-wrap.bd-description-wrap.bda-description-wrap.scroller-wrap.fade{
+	color: white ;
+}
+
+
+/* Better RTC Connection popout */
+#popout_1591 div div header {
+	border-radius: 15px 15px 0 0 !important;
+}
+#popout_1591 div div section {
+	border-radius: 0 0 15px 15px !important;
+}
+.container-2x5lvQ {
+     width: 240px;
+     box-shadow: none;
+}
+.container-2x5lvQ>section {
+	background: rgba(0, 0, 0, 0.9) !important;
+}
+.container-2x5lvQ section p:nth-of-type(1) {
+     font-size: 0;
+}
+.container-2x5lvQ section p:nth-of-type(2) {
+     display: none;
+}
+.container-2x5lvQ section strong {
+     font-size: 14px;
+     white-space: pre;
+}
+.container-2x5lvQ section strong::before {
+     font-weight: normal;
+}
+.container-2x5lvQ section strong:nth-of-type(1)::before {
+     content: 'Server: ';
+}
+.container-2x5lvQ section strong:nth-of-type(2)::before {
+     content: 'Average Ping: ';
+}
+.container-2x5lvQ section strong:nth-of-type(3)::before {
+     content: ' Last Ping: ';
+}
+.container-2x5lvQ section strong:nth-of-type(4)::before {
+     content: 'Packet Loss: ';
+}
