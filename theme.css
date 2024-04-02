@@ -308,7 +308,6 @@ div[aria-label*="Pinned Messages"] > div > .header-ykumBX {  // Pinned messages 
 }
 
 .wrapper-1Rf91z, .guilds-1SWlCJ {
-	background: transparent !important;
 	border: 0 !important;
 	box-shadow: 0 0	 !important;
 }
@@ -316,7 +315,6 @@ div[aria-label*="Pinned Messages"] > div > .header-ykumBX {  // Pinned messages 
  	border-radius: 10px !important;
  	margin-right: 20px;
  	//margin-left: 10px;   // REMOVE COMMENTS IF YOU USE   HorizontalServerList
-    background: transparent !important;
 }
 
 
